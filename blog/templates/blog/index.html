@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/includes/post.css' %}">
     <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 
@@ -10,45 +11,25 @@
 {% endblock page_title %}
 
 {% block content %}
-    {% include "blog/includes/header.html" %}
-    <header>
-        <h1>
-            <a href="">Delicious blog</a>
-        </h1>
-        <nav>
-            <a href="">All Posts</a>
-        </nav>
-    </header>
+
     <section id="welcome">
         <header>
-            <img src="" alt="Author"/>
+            <img src="{% static "blog/images/max.png" %}" alt="Author"/>
             <h2>Delicious blog</h2>
         </header>
         <p>
             Welcome to my world
         </p>
         <ul>
-            <li>Dummy post
-            </li>
         </ul>
     </section>
-        <section id="latests-posts">
+        <section id="latest-posts">
         <h2>
             Latests Posts
         </h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="" alt="hiking" />
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p>Moew mountains</p>
-                        </div>
-                    </a>
-                </artivle
-            </li>
+            {% include "blog/includes/post.html" %}
         </ul>
 
     </section>

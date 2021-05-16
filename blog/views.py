@@ -11,14 +11,9 @@ def about(request):
     return render(request, "blog/about.html")
 
 def posts(request):
-    return render(request, "blog/posts_page.html", {
-        "posts": "moo"
-    })
+    return render(request, "blog/posts_page.html")
 
 def post(request, slug):
-    try:
-        return render(request, "blog/post_detail.html", {
-                    "post": "this is a post"
-                })
-    except:
-        raise Http404("not found : (")
+    return render(request, "blog/post_detail.html")
+    # except:
+    #     raise Http404("not found : (")

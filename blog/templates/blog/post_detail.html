@@ -1,13 +1,32 @@
-{% extends 'base' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block css_files %}
     <link rel="stylesheet" href="{% static 'blog/post_detail.css' %}">
 {% endblock %}
 
-{% block page_title %}{% endblock page_title %}
+{% block page_title %}
+This Post Title
+{% endblock page_title %}
 
 {% block content %}
-    Post Detail
-    {{post}}
+    <section id="summary">
+        <h2>Page Title</h2>
+        <article>
+            <img src="{% static "blog/images/mountains.jpeg" %}" alt="Post Title" />
+            <address>By Gargamel</address>
+            <div>
+                Last updated on <time>July 20th</time>
+            </div>
+        </article>
+    </section>
+    <main>
+        <p>
+            {% lorem 1 b random %}
+        </p>
+
+        <p>
+            {% lorem 4 p random %}
+        </p>
+    </main>
 {% endblock content %}
