@@ -1,13 +1,15 @@
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block page_title%}Moo{% endblock %}</title>
-</head>
-<body>
-    Index
-</body>
-</html>
+{% block css_files %}{% endblock %}
+
+{% block page_title %}Blog Posts{% endblock page_title %}
+
+{% block content %}
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="www.google.com">{{ post|title }}...</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
