@@ -5,15 +5,56 @@
     <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 
-{% block page_title %}Blog Posts{% endblock page_title %}
+{% block page_title %}
+    Delicious Blog
+{% endblock page_title %}
 
 {% block content %}
     {% include "blog/includes/header.html" %}
-    <ul>
-        {% for post in posts %}
-            <li>
-                <a href="www.google.com">{{ post|title }}...</a>
+    <header>
+        <h1>
+            <a href="">Delicious blog</a>
+        </h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+    <section id="welcome">
+        <header>
+            <img src="" alt="Author"/>
+            <h2>Delicious blog</h2>
+        </header>
+        <p>
+            Welcome to my world
+        </p>
+        <ul>
+            <li>Dummy post
             </li>
-        {% endfor %}
-    </ul>
+        </ul>
+    </section>
+        <section id="latests-posts">
+        <h2>
+            Latests Posts
+        </h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="hiking" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>Moew mountains</p>
+                        </div>
+                    </a>
+                </artivle
+            </li>
+        </ul>
+
+    </section>
+    <section id="about">
+        <h2>What I do</h2>
+        <p>yum yumm</p>
+        <p>stuff</p>
+    </section>
 {% endblock content %}
