@@ -1,11 +1,11 @@
+from datetime import date
 
-
-posts = [
+all_posts = [
     {
         "slug": "hike-in-the-mountains",
         "image": "mountains.jpg",
-        "author": "Maximilian",
-        # "date": date(2021, 7, 21),
+        "author": "Christoff",
+        "date": date(2021, 7, 21),
         "title": "Mountain Hiking",
         "excerpt": "There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoying the view!",
         "content": """
@@ -25,8 +25,8 @@ posts = [
     {
         "slug": "programming-is-fun",
         "image": "coding.jpg",
-        "author": "Maximilian",
-        # "date": date(2022, 3, 10),
+        "author": "Chester",
+        "date": date(2022, 3, 10),
         "title": "Programming Is Great!",
         "excerpt": "Did you ever spend hours searching that one error in your code? Yep - that's what happened to me yesterday...",
         "content": """
@@ -46,8 +46,8 @@ posts = [
     {
         "slug": "into-the-woods",
         "image": "woods.jpg",
-        "author": "Maximilian",
-        # "date": date(2020, 8, 5),
+        "author": "Sammy",
+        "date": date(2020, 8, 5),
         "title": "Nature At Its Best",
         "excerpt": "Nature is amazing! The amount of inspiration I get when walking in nature is incredible!",
         "content": """
